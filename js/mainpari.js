@@ -22,3 +22,25 @@ function selectNumber() {
     }
     return numeroUtente
 }
+
+function controlPari(somma) {
+    return somma % 2 === 0 ? "pari" : "dispari";
+}
+
+// funzione per dichiarare vincitore //
+
+function winner(pariDispari, numeroUtente, numeroComputer) {
+    let somma = numeroUtente + numeroComputer;
+    let risultato = controlPari(somma);
+
+    console.log(`L'utente ha scelto ${pariDispari}`);
+    console.log(`L'utente ha scelto il numero ${numeroUtente}`);
+    console.log(`Il computer ha generato il numero ${numeroComputer}`);
+    console.log(`La somma è ${somma} e quindi è ${risultato}`);
+
+    if (pariDispari === risultato) {
+        console.log("Hai vinto!");
+    } else {
+        console.log("Hai perso!");
+    }
+}
