@@ -44,3 +44,15 @@ function winner(pariDispari, numeroUtente, numeroComputer) {
         console.log("Hai perso!");
     }
 }
+
+// Chiediamo i dati all'utente//
+let sceltaPariDispari = selectPari();
+let sceltaNumero = selectNumber();
+
+if (sceltaPariDispari !== null && sceltaNumero !== null) {
+    let pariDispari = sceltaPariDispari;
+    let numeroUtente = sceltaNumero;
+    let numeroComputer = generaNumeroCasuale();
+    winner(pariDispari, numeroUtente, numeroComputer);
+}
+
